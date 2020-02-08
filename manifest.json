@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Reddit Expand",
+	"version": "1.0.0",
+	"description": "Allows easier expansion of reddit items",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "reddit-expand@grim.grim"
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://www.reddit.com/*"],
+			"run_at":"document_end",
+			"all_frames": false,
+			"js": ["content_script.js"]
+		}
+	]
+}
